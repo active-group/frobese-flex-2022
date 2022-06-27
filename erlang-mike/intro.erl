@@ -4,7 +4,8 @@
          d1/0, d2/0, p1/0, p2/0, run_over_dillo/1, run_over_animal/1,
          list_sum/1, feed_animal/2, feed_animals/2, highway/0,
          rev/1, list_map/2,
-         start_process/0, process/0]).
+         start_process/0, process/0,
+         counter/1]).
 -compile([{nowarn_unused_function, [foo/0]}]).
 % double/1 die einstellige Funktion double
 
