@@ -68,3 +68,7 @@ dogs_per_leg(Legs) ->
             {error, bug_in_code};
         {ok, Dogs} -> Dogs
     end.
+
+% 3 Sorten Haustiere:
+% Hund, Katze, Schlange
+% Schreibe eine Funktion, die liefert, ob ein Haustier niedlich ist.
