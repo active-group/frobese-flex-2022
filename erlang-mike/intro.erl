@@ -188,3 +188,5 @@ process() ->
             io:format("received message: ~w~n", [Message]),
             process()
     end.
+
+counter()
