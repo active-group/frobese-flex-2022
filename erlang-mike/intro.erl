@@ -61,4 +61,5 @@ safe_divide(X, Y) ->
         true -> {ok, X / Y}
     end.
 
-dogs_per_leg()
+dogs_per_leg(Legs) ->
+    safe_divide(Legs, 4)
