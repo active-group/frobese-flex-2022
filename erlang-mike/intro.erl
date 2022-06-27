@@ -42,6 +42,7 @@ state(Temp) ->
 
 % Typische Temperatur für Aggregatzustand
 -spec typical(st()) -> number().
+% Pattern Matching
 typical(fest) -> -20;
 typical(fluessig) -> 20;
 typical(gas) -> 100.
