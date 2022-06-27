@@ -46,3 +46,9 @@ state(Temp) ->
 typical(fest) -> -20;
 typical(fluessig) -> 20;
 typical(gas) -> 100.
+
+safe_divide(X, Y) ->
+    if
+        Y == 0 -> {error, divide_by_zero};
+        true -> {ok, X / Y}
+    end.
