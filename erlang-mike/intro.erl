@@ -198,6 +198,8 @@ get_counter(Pid) ->
     Pid ! {get, self()},
     receive
         Value -> Value
+        after 5000 ->
+            timeout
     end.
 
 counter_loop(N) ->
