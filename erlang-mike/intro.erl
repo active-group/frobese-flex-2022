@@ -190,6 +190,7 @@ process() ->
             process()
     end.
 
+% "Supervisor"
 -spec counter(number()) -> pid().
 counter(Start) ->
     process_flag(trap_exit, true),
