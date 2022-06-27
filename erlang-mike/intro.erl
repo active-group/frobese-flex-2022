@@ -25,3 +25,5 @@ double(X) -> X * 2.
 
 -spec double(number(), number()) -> number(). 
 double(X, Y) -> double(X * Y).
+
+% Aggregatzustand von Wasser
