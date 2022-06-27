@@ -41,7 +41,7 @@ state(Temp) ->
 % Eine Funktionsklausel pro Fall. 
 
 % Typische Temperatur für Aggregatzustand
--spec typical(fest | fluessig | gas) -> number().
+-spec typical(st()) -> number().
 typical(fest) -> -20;
 typical(fluessig) -> 20;
 typical(gas) -> 100.
