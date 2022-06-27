@@ -141,3 +141,5 @@ foo() -> bar.
 list_sum([]) -> 0;
 list_sum([First | Rest]) -> 
     First + list_sum(Rest).
+
+highway() -> [d1(), d2(), p1(), p2()].
