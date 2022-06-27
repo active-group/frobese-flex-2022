@@ -64,4 +64,5 @@ safe_divide(X, Y) ->
 dogs_per_leg(Legs) ->
     case safe_divide(Legs, 4) of
         {ok, Dogs} -> Dogs;
-        {error, Message} -> io:format("problem: ")
+        {error, Message} -> io:format("problem: ~w~n", [Message])
+    end.
