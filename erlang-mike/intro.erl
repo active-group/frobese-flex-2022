@@ -179,6 +179,7 @@ rev([First|Rest], Acc) ->
 
 start_process() ->
     % spawn(fun process/0)
+    % spawn(intro, process)
     spawn(?MODULE, process). % die Funktion process im Modul intro
 
 process() ->
