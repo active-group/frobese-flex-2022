@@ -1,5 +1,7 @@
 -module(intro).
 
+% ^^^  sollte dem Dateinamen entsprechen
+% 
 % Alles mit Punkt abschließen
 % 42 Zahl
 % mike Atom (Kleinbuchstabe)
