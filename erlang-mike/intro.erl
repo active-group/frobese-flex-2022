@@ -143,3 +143,8 @@ list_sum([First | Rest]) ->
     First + list_sum(Rest).
 
 highway() -> [d1(), d2(), p1(), p2()].
+
+-spec feed_animal(animal(), number()) -> animal().
+feed_animal(#dillo{liveness=alive, weight = Weight}, Amount) ->
+    #dillo { liveness = alive, weight = Weight + Amount};
+feed_animal(#dillo{liveness=dead} = D) -> D
