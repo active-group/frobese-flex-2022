@@ -193,7 +193,8 @@ process() ->
 -spec counter(number()) -> pid().
 counter(Start) ->
     Pid = spawn(fun () -> counter_loop(Start) end),
-    link(Pid), % Dein Schicksal ist mein Schicksal
+    link(Pid), % "Dein Schicksal ist mein Schicksal"
+    
     Pid.
 
 get_counter(Pid) ->
