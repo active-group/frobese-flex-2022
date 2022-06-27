@@ -5,3 +5,5 @@
 % mike Atom (Kleinbuchstabe)
 % "mike" (String)
 % {1, "mike", sperber} Tupel
+% <<1,2,3>> Binary: Bytes 1 2 3
+% <<"mike">> Binary, mit ASCII-Codierung
