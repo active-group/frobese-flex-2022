@@ -149,3 +149,5 @@ feed_animal(#dillo{liveness=alive, weight = Weight}, Amount) ->
     #dillo { liveness = alive, weight = Weight + Amount};
 feed_animal(#dillo{liveness=dead} = D, _) -> D.
 
+% Liste umdrehen
+-
