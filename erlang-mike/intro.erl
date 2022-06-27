@@ -52,7 +52,8 @@ typical(State) ->
     case State of
         fest -> -20;
         fluessig -> 20;
-        gas -> 100
+        gas -> 100;
+        _ -> error
     end.
 
 safe_divide(X, Y) ->
