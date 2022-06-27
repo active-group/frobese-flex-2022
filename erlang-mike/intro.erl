@@ -194,8 +194,14 @@ process() ->
 counter(Start) ->
     spawn(fun () -> counter_loop(Start) end).
 
+get_counter(Pid) ->
+    Pid ! {get, self()}.
+
 counter_loop(N) ->
     receive
+        get ->
+            .. ! N,
+            counter_loop(N);
         Inc ->
             io:format("at counter ~w received inc ~w~n", [N, Inc]),
             counter_loop(N + Inc)
