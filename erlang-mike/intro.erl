@@ -11,3 +11,4 @@
 % Anmerkung: Strings sind Listen
 % #{a => "hello"}. Map
 % #{a => "hello", b => "goodbye"}.
+% Variablen fangen mit Großbuchstaben an
