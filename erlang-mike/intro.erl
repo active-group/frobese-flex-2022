@@ -189,4 +189,9 @@ process() ->
             process()
     end.
 
-counter()
+counter_loop(N) ->
+    receive
+        Inc ->
+            io:format("at counter ~w received inc ~w~n", [N, Inc]),
+            counter_loop(N + Inc)
+    end.
