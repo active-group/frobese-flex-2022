@@ -92,15 +92,21 @@ minutes_since_midnight(#time{ hour = H, minute = M }) ->
     HM + M.
 
 % Ein Gürteltier hat folgende Eigenschaften:
-% - tot oder lebendig
+% - tot oder lebendig - UND -
 % - Gewicht
 % zusammengesetzte Daten
 -record(dillo, { liveness :: dead | alive, weight :: number() }).
 
 % Ein Papagei hat folgende Eigenschaften:
-% - Satz
+% - Satz - UND -
 % - Gewicht
 -record(parrot, { sentence :: string(), weight :: number() }).
+
+% Ein Tier ist eins der folgenden:
+% - Gürteltier - ODER -
+% - Papagei
+% gemischte Daten
+-type animal() :: #dillo{} | #parrot{}.
 
 d1() -> #dillo { liveness = alive, weight = 10 }.
 d2() -> #dillo { liveness = dead, weight = 8 }.
@@ -115,5 +121,10 @@ p2() -> #parrot { sentence = "Goodbye!", weight = 1.5 }.
 run_over_dillo(D) ->
     #dillo { liveness = dead, weight = D#dillo.weight }.
     
+-spec run_over_animal(animal()) -> animal().
+run_over_animal(#dillo{ weight = Weight} = D) ->
+    D#dillo { liveness = dead};
+run_over_animal(#parrot{ sentence = Sentence, weight = Weight}) ->
+    #parrot { sentence = "", weight = Weight}.
 
 % Gürteltier füttern
