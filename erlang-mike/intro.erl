@@ -195,6 +195,7 @@ counter(Start) ->
     spawn(fun () -> counter_loop(Start) end).
 
 get_counter(Pid) ->
+    % RPC
     Pid ! {get, self()},
     receive
         Value -> Value
