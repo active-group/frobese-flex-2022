@@ -5,7 +5,7 @@
          list_sum/1, feed_animal/2, feed_animals/2, highway/0,
          rev/1, list_map/2,
          start_process/0, process/0,
-         counter/1]).
+         counter/1, get_counter/1]).
 -compile([{nowarn_unused_function, [foo/0]}]).
 % double/1 die einstellige Funktion double
 
