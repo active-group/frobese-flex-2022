@@ -83,3 +83,6 @@ dogs_per_leg(Legs) ->
 
 t1() -> #time{ hour = 11, minute = 34}.
 t2() -> #time{ hour = 12, minute = 12}.
+
+% Minuten seit Mitternacht
+-spec minutes_since_midnight(#time{}) -> 
