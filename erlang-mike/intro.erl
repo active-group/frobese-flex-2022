@@ -127,4 +127,6 @@ run_over_animal(#dillo{} = D) ->
 run_over_animal(#parrot{ weight = Weight }) ->
     #parrot { sentence = "", weight = Weight}.
 
+foo() -> bar.
+
 % Gürteltier füttern
