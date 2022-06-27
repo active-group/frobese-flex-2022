@@ -122,7 +122,7 @@ run_over_dillo(D) ->
     #dillo { liveness = dead, weight = D#dillo.weight }.
     
 -spec run_over_animal(animal()) -> animal().
-run_over_animal(#dillo{ weight = Weight} = D) ->
+run_over_animal(#dillo{} = D) ->
     D#dillo { liveness = dead};
 run_over_animal(#parrot{ sentence = Sentence, weight = Weight}) ->
     #parrot { sentence = "", weight = Weight}.
