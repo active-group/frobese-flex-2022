@@ -30,5 +30,6 @@ double(X, Y) -> double(X * Y).
 -spec state(number()) -> fest | fluessig | gas.
 state(Temp) ->
     if 
-        Temp 
+        Temp < 0 -> fest;
+        
     end.
