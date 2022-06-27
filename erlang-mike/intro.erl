@@ -176,3 +176,8 @@ rev([First|Rest], Acc) ->
   rev(Rest, [First | Acc]).
 
 
+process() ->
+    receive % wie case
+        Message ->
+            io:format("reveived message: ~w~n", [Message])
+    end.
