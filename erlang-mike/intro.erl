@@ -189,6 +189,9 @@ process() ->
             process()
     end.
 
+counter(Start) ->
+    spawn(fun () -> counter_loop(Start) end).
+
 counter_loop(N) ->
     receive
         Inc ->
