@@ -203,7 +203,7 @@ get_counter(Pid) ->
 counter_loop(N) ->
     receive
         {get, SenderPid} ->
-            SenderPid ! N,
+            % SenderPid ! N,
             counter_loop(N);
         Inc ->
             io:format("at counter ~w received inc ~w~n", [N, Inc]),
