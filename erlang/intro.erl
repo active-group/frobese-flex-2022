@@ -1,8 +1,8 @@
 -module(intro).
--export([willcome/0]).
+-export([welcome/0]).
 
-willcome() ->
-    'wellcome'.
+welcome() ->
+    'welcome'.
 
 
 
