@@ -66,5 +66,5 @@ dogs_per_leg(Legs) ->
         {error, Message} -> 
             io:format("problem: ~w~n", [Message]), % Komma!
             {error, bug_in_code};
-        {ok, Dogs} -> Dogs
+        {ok, Dogs} -> Dogs;
     end.
