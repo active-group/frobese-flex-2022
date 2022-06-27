@@ -189,6 +189,7 @@ process() ->
             process()
     end.
 
+-spec counter(number()) -> pid().
 counter(Start) ->
     spawn(fun () -> counter_loop(Start) end).
 
