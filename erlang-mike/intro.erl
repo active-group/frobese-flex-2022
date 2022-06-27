@@ -1,5 +1,5 @@
 -module(intro).
--export([double/1]). 
+-export([double/1, double/2]). 
 % double/1 die einstellige Funktion double
 
 % ^^^  sollte dem Dateinamen entsprechen
