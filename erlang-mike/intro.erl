@@ -183,5 +183,6 @@ start_process() ->
 process() ->
     receive % wie case
         Message ->
-            io:format("reveived message: ~w~n", [Message])
+            io:format("received message: ~w~n", [Message]),
+            process()
     end.
