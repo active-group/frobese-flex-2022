@@ -89,3 +89,9 @@ t2() -> #time{ hour = 12, minute = 12}.
 minutes_since_midnight(#time{ hour = H, minute = M }) ->
     HM = H * 60,
     HM + M.
+
+% Ein Gürteltier hat folgende Eigenschaften:
+% - tot oder lebendig
+% - Gewicht
+% zusammengesetzte Daten
+-record(dillo, { liveness :: dead | alive, weight :: number() }.
