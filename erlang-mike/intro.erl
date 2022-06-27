@@ -21,3 +21,5 @@
 % - die leere Liste
 % - eine Cons-Liste aus erstem Element und Rest
 double(X) -> X * 2.
+
+double(X, Y) -> X * Y * 2.
