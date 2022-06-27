@@ -194,7 +194,9 @@ process() ->
 counter(Start) ->
     Pid = spawn(fun () -> counter_loop(Start) end),
     link(Pid), % "Dein Schicksal ist mein Schicksal"
-    
+    % Wenn ein gelinkter Prozeß stirbt, bekommen wir 
+    % stattdessen eine Nachricht.
+    process_flag(trap_exit, true),
     Pid.
 
 get_counter(Pid) ->
