@@ -1,4 +1,5 @@
 -module(intro).
+-export 
 
 % ^^^  sollte dem Dateinamen entsprechen
 % 
