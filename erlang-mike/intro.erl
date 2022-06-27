@@ -73,3 +73,9 @@ dogs_per_leg(Legs) ->
 % 3 Sorten Haustiere:
 % Hund, Katze, Schlange
 % Schreibe eine Funktion, die liefert, ob ein Haustier niedlich ist.
+
+% Eine Uhrzeit besteht aus:
+% - Stunde
+% - Minute
+% zusammengesetzte Daten
+-record 
