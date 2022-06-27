@@ -12,3 +12,5 @@
 % #{a => "hello"}. Map
 % #{a => "hello", b => "goodbye"}.
 % Variablen fangen mit Großbuchstaben an
+% 
+double(X) -> X * 2.
