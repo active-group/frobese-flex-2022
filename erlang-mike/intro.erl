@@ -20,6 +20,7 @@
 % Liste ist eins der folgenden:
 % - die leere Liste
 % - eine Cons-Liste aus erstem Element und Rest
+-spec double(number()) -> number().
 double(X) -> X * 2.
 
 double(X, Y) -> X * Y * 2.
