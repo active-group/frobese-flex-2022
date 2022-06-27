@@ -1,5 +1,5 @@
 -module(intro).
--export 
+-export([double/1]).
 
 % ^^^  sollte dem Dateinamen entsprechen
 % 
