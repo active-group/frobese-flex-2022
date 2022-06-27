@@ -65,6 +65,6 @@ dogs_per_leg(Legs) ->
     case safe_divide(Legs, 0) of
         {ok, Dogs} -> Dogs;
         {error, Message} -> 
-            io:format("problem: ~w~n", [Message]),
+            io:format("problem: ~w~n", [Message]), $ % Komma!
             {error, bug_in_code}
     end.
