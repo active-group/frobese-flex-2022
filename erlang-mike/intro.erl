@@ -155,4 +155,4 @@ feed_animal(#dillo{liveness=dead} = D, _) -> D.
 % quadratisch
 % rev([]) -> [];
 % rev([First | Rest]) -> rev(Rest) ++ [First].
-
+rev(List, )
