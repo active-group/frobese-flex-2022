@@ -7,4 +7,4 @@
 % {1, "mike", sperber} Tupel
 % <<1,2,3>> Binary: Bytes 1 2 3
 % <<"mike">> Binary, mit ASCII-Codierung
-% 
+% [1,2,3] Liste
