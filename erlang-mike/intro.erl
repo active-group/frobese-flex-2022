@@ -200,7 +200,7 @@ counter(Start) ->
     % Wenn ein gelinkter Prozeß stirbt, bekommen wir 
     % stattdessen eine Nachricht.
     receive
-        {'EXIT', FromPid, Reason} ->
+        {'EXIT', _FromPid, _Reason} ->
             counter(Start)
     end.
 
