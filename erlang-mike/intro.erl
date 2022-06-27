@@ -176,6 +176,9 @@ rev([First|Rest], Acc) ->
   rev(Rest, [First | Acc]).
 
 
+start_process() ->
+    spawn(fun process/0).
+
 process() ->
     receive % wie case
         Message ->
