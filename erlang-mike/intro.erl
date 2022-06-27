@@ -124,7 +124,7 @@ run_over_dillo(D) ->
 -spec run_over_animal(animal()) -> animal().
 run_over_animal(#dillo{} = D) ->
     D#dillo { liveness = dead};
-run_over_animal(#parrot{ sentence = Sentence, weight = Weight}) ->
+run_over_animal(#parrot{ weight = Weight}) ->
     #parrot { sentence = "", weight = Weight}.
 
 % Gürteltier füttern
