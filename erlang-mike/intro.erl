@@ -49,7 +49,11 @@ state(Temp) ->
 % typical(gas) -> 100.
 % 
 typical(State) ->
-    case State 
+    case State of
+        fest -> -20;
+        fluessig -> 20;
+        gas -> 100
+    end.
 
 safe_divide(X, Y) ->
     if
