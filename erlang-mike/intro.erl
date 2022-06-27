@@ -148,3 +148,4 @@ highway() -> [d1(), d2(), p1(), p2()].
 feed_animal(#dillo{liveness=alive, weight = Weight}, Amount) ->
     #dillo { liveness = alive, weight = Weight + Amount};
 feed_animal(#dillo{liveness=dead} = D, _) -> D.
+
