@@ -131,3 +131,7 @@ run_over_animal(#parrot{ weight = Weight }) ->
 foo() -> bar.
 
 % Gürteltier füttern
+
+% Eine Liste eins der folgenden:
+% - die leere Liste
+% - eine Cons-Liste aus erstem Element und Rest
