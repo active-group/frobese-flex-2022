@@ -195,7 +195,10 @@ counter(Start) ->
     spawn(fun () -> counter_loop(Start) end).
 
 get_counter(Pid) ->
-    Pid ! {get, self()}.
+    Pid ! {get, self()},
+    receive
+        Value -> Value
+    end.
 
 counter_loop(N) ->
     receive
