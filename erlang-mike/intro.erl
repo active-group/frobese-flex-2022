@@ -157,7 +157,8 @@ feed_animal(#parrot{ weight = Weight} = P, Amount) ->
 % feed_animals([First|Rest], Amount) ->
 %    [feed_animal(First, Amount) | feed_animals(Rest, Amount)].
 feed_animals(List, Amount) ->
-    list_map()
+    list_map(fun (Animal) -> intro:feed_animal(Animal, Amount) end, List).
+
 list_map(_, []) ->[];
 list_map(F, [First|Rest]) ->
     [F(First) | list_map(F, Rest)].
