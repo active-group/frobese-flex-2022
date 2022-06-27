@@ -23,4 +23,5 @@
 -spec double(number()) -> number().
 double(X) -> X * 2.
 
+-spec double(number(), number()) -> number(). 
 double(X, Y) -> X * Y * 2.
