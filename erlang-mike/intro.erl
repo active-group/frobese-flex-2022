@@ -156,6 +156,7 @@ feed_animal(#dillo{liveness=dead} = D, _) -> D.
 % rev([]) -> [];
 % rev([First | Rest]) -> rev(Rest) ++ [First].
 % Acc ist die Liste der bisher gesehenen Elemente, umgedreht.
+rev(List) -> rev(List, [])
 rev([], Acc) -> Acc;
 rev([First|Rest], Acc) ->
   rev(Rest, [First | Acc]).
