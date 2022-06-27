@@ -31,6 +31,6 @@ double(X, Y) -> double(X * Y).
 state(Temp) ->
     if 
         Temp < 0 -> fest;
-        Temp > 100 -> gas;
-        true -> fluessig;
+        Temp > 100 -> gas; % ; dazwischen
+        true -> fluessig
     end.
