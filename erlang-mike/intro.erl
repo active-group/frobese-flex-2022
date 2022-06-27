@@ -97,6 +97,8 @@ minutes_since_midnight(#time{ hour = H, minute = M }) ->
 % zusammengesetzte Daten
 -record(dillo, { liveness :: dead | alive, weight :: number() }).
 
+d1() -> #dillo { liveness = alive, weight = 10 }.
+
 % Gürteltier überfahren
 -spec run_over_dillo(#dillo{}) -> #dillo{}.
 % run_over_dillo(#dillo{ weight = Weight}) ->
