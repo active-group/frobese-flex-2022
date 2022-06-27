@@ -148,7 +148,14 @@ highway() -> [d1(), d2(), p1(), p2()].
 -spec feed_animal(animal(), number()) -> animal().
 feed_animal(#dillo{liveness=alive, weight = Weight}, Amount) ->
     #dillo { liveness = alive, weight = Weight + Amount};
-feed_animal(#dillo{liveness=dead} = D, _) -> D.
+feed_animal(#dillo{liveness=dead} = D, _) -> D;
+feed_animal(#parrot{ weight = Weight} = P, Amount) ->
+   P#parrot { weight = Weight + Amount}.
+
+
+feed_animals([], Amount) ->[];
+feed_animals([First|Rest], Amount) ->
+    [feed_animal(First, Amount) | feed_animals(Rest, Amount)].
 
 % Liste umdrehen
 -spec rev(list(A)) -> list(A).
@@ -161,3 +168,5 @@ rev([], Acc) -> Acc;
 rev([First|Rest], Acc) ->
   % tail call, verbraucht keinen Speicher auf dem "Stack"
   rev(Rest, [First | Acc]).
+
+
