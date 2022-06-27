@@ -152,7 +152,7 @@ feed_animal(#dillo{liveness=dead} = D, _) -> D.
 
 % Liste umdrehen
 -spec rev(list(A)) -> list(A).
-rev([]) -> [];
-rev([First | Rest]) ->
-    append(rev(Rest), [First]).
+% quadratisch
+% rev([]) -> [];
+% rev([First | Rest]) -> rev(Rest) ++ [First].
 
