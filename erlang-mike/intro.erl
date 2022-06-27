@@ -79,3 +79,6 @@ dogs_per_leg(Legs) ->
 % - Minute
 % zusammengesetzte Daten
 -record(time, {hour :: 0..23, minute :: 0..59}).
+
+t1() -> #time{ hour = 11, minute = 34}.
+t2() -> #time{ hour = 12, minute = 12}.
