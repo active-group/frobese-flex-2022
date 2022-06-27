@@ -192,12 +192,15 @@ process() ->
 
 -spec counter(number()) -> pid().
 counter(Start) ->
-    Pid = spawn(fun () -> counter_loop(Start) end),
-    link(Pid), % "Dein Schicksal ist mein Schicksal"
+    process_flag(trap_exit, true),
+    % spawn + link atomar
+    Pid = spawn_link(fun () -> counter_loop(Start) end),
+    register(counter_service, Pid),
+    % link(Pid), % "Dein Schicksal ist mein Schicksal"
     % Wenn ein gelinkter Prozeß stirbt, bekommen wir 
     % stattdessen eine Nachricht.
-    process_flag(trap_exit, true),
-    Pid.
+    receive
+        
 
 get_counter(Pid) ->
     % RPC
