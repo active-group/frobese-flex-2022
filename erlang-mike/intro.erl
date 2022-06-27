@@ -154,4 +154,5 @@ feed_animal(#dillo{liveness=dead} = D, _) -> D.
 -spec rev(list(A)) -> list(A).
 rev([]) -> [];
 rev([First | Rest]) ->
-    rev(Rest) ++ [First].
+    append(rev(Rest), [First]).
+
