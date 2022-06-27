@@ -78,4 +78,4 @@ dogs_per_leg(Legs) ->
 % - Stunde
 % - Minute
 % zusammengesetzte Daten
--record
+-record(time, )
