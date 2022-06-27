@@ -133,5 +133,10 @@ foo() -> bar.
 % Gürteltier füttern
 
 % Eine Liste eins der folgenden:
-% - die leere Liste                             []
-% - eine Cons-Liste aus erstem Element und Rest [First | Rest]
+% - die leere Liste                                   []
+% - eine Cons-Liste aus erstem Element und Rest-Liste [First | Rest]
+%                                               ^^^^^ Selbstbezug
+-spec list_sum(list(number())) -> number().
+list_sum([]) -> 0;
+list_sum([First | Rest]) -> 
+    First + list_sum(Rest).
