@@ -103,6 +103,9 @@ minutes_since_midnight(#time{ hour = H, minute = M }) ->
 -record(parrot, { sentence :: string(), weight :: number() }).
 
 d1() -> #dillo { liveness = alive, weight = 10 }.
+d2() -> #dillo { liveness = dead, weight = 8 }.
+p1() -> #parrot { sentence = "Hello!", weight = 1 }.
+p2() -> #parrot { sentence = "Goodbye!", weight = 1.5 }.
 
 % Gürteltier überfahren
 -spec run_over_dillo(#dillo{}) -> #dillo{}.
