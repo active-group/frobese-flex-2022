@@ -1,5 +1,6 @@
 -module(intro).
--export([double/1, double/2, state/1, typical/1, dogs_per_leg/1]). 
+-export([double/1, double/2, state/1, typical/1, dogs_per_leg/1,
+         t1/0, t2/0]). 
 % double/1 die einstellige Funktion double
 
 % ^^^  sollte dem Dateinamen entsprechen
