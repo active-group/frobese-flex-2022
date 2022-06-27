@@ -157,7 +157,10 @@ feed_animals([], _) ->[];
 feed_animals([First|Rest], Amount) ->
     [feed_animal(First, Amount) | feed_animals(Rest, Amount)].
 
-    
+list_map([]) ->[];
+list_map([First|Rest]) ->
+    [F(First) | list_map(Rest)].
+
 % Liste umdrehen
 -spec rev(list(A)) -> list(A).
 % quadratisch
