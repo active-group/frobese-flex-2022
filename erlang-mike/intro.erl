@@ -159,4 +159,5 @@ feed_animal(#dillo{liveness=dead} = D, _) -> D.
 rev(List) -> rev(List, []).
 rev([], Acc) -> Acc;
 rev([First|Rest], Acc) ->
+  % tail call
   rev(Rest, [First | Acc]).
