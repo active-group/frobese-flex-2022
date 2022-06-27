@@ -178,7 +178,8 @@ rev([First|Rest], Acc) ->
 
 
 start_process() ->
-    spawn(fun process/0).
+    % spawn(fun process/0)
+    spawn(intro, process).
 
 process() ->
     receive % wie case
