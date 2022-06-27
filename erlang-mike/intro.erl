@@ -133,5 +133,5 @@ foo() -> bar.
 % Gürteltier füttern
 
 % Eine Liste eins der folgenden:
-% - die leere Liste
-% - eine Cons-Liste aus erstem Element und Rest
+% - die leere Liste                             []
+% - eine Cons-Liste aus erstem Element und Rest [First | Rest]
