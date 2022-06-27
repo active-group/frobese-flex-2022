@@ -35,6 +35,9 @@ state(Temp) ->
         true -> fluessig
     end.
 
+% fest | fluessig | gas: Fallunterscheidung
+% Eine Funktionsklausel pro Fall. 
+
 % Typische Temperatur für Aggregatzustand
 -spec typical(fest | fluessig | gas) -> number().
 typical(fest) -> -20;
