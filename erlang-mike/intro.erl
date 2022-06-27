@@ -94,4 +94,4 @@ minutes_since_midnight(#time{ hour = H, minute = M }) ->
 % - tot oder lebendig
 % - Gewicht
 % zusammengesetzte Daten
--record(dillo, { liveness :: dead | alive, weight :: number() }.
+-record(dillo, { liveness :: dead | alive, weight :: number() }).
