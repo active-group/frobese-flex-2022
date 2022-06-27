@@ -153,7 +153,7 @@ feed_animal(#parrot{ weight = Weight} = P, Amount) ->
    P#parrot { weight = Weight + Amount}.
 
 
-feed_animals([], Amount) ->[];
+feed_animals([], _) ->[];
 feed_animals([First|Rest], Amount) ->
     [feed_animal(First, Amount) | feed_animals(Rest, Amount)].
 
