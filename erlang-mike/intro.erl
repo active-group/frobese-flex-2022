@@ -27,4 +27,4 @@ double(X) -> X * 2.
 double(X, Y) -> double(X * Y).
 
 % Aggregatzustand von Wasser
--spec state
+-spec state(number())
