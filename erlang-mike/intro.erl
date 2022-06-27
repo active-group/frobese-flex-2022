@@ -157,7 +157,7 @@ feed_animals([], _) ->[];
 feed_animals([First|Rest], Amount) ->
     [feed_animal(First, Amount) | feed_animals(Rest, Amount)].
 
-list_map(F, []) ->[];
+list_map(_, []) ->[];
 list_map(F, [First|Rest]) ->
     [F(First) | list_map(F, Rest)].
 
