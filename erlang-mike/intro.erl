@@ -97,6 +97,11 @@ minutes_since_midnight(#time{ hour = H, minute = M }) ->
 % zusammengesetzte Daten
 -record(dillo, { liveness :: dead | alive, weight :: number() }).
 
+% Ein Papagei hat folgende Eigenschaften:
+% - Satz
+% - Gewicht
+-record(parrot, { sentence :: string(), weight :: number() }).
+
 d1() -> #dillo { liveness = alive, weight = 10 }.
 
 % Gürteltier überfahren
