@@ -41,7 +41,7 @@ state(Temp) ->
 % Eine Funktionsklausel pro Fall. 
 
 % Typische Temperatur für Aggregatzustand
--spec typical(st()) -> number().
+-spec typical(st()) -> number() | error.
 % Pattern Matching, Reihenfolge wichtig
 
 % typical(fest) -> -20;
