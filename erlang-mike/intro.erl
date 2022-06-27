@@ -203,7 +203,11 @@ get_counter(Pid) ->
             timeout
     end.
 
-counter_add
+-spec counter_add(pid(), number()) -> ok.
+counter_add(Pid, Inc) ->
+    Pid ! Inc,
+    ok.
+
 counter_loop(N) ->
     receive
         {get, SenderPid} ->
