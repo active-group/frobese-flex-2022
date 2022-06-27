@@ -17,4 +17,7 @@
 % #{a => "hello", b => "goodbye"}.
 % Variablen fangen mit Großbuchstaben an
 % 
+% Liste ist eins der folgenden:
+% - die leere Liste
+% - eine Cons-Liste aus erstem Element und Rest
 double(X) -> X * 2.
