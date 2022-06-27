@@ -105,7 +105,7 @@ d1() -> #dillo { liveness = alive, weight = 10 }.
 %     #dillo{ liveness = dead, weight = Weight}.
 % run_over_dillo(D) -> D#dillo{ liveness = dead}.    
 run_over_dillo(D) ->
-    #dillo { liveness = Dead, D#dillo.weight }.
+    #dillo { liveness = Dead, dillo#D.weight }.
     
 
 % Gürteltier füttern
