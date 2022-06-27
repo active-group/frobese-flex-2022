@@ -200,7 +200,7 @@ counter(Start) ->
     % Wenn ein gelinkter Prozeß stirbt, bekommen wir 
     % stattdessen eine Nachricht.
     receive
-        {'EXIT', }
+        {'EXIT', FromPid, Reason} 
 
 get_counter(Pid) ->
     % RPC
