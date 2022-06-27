@@ -26,7 +26,8 @@ double(X) -> X * 2.
 -spec double(number(), number()) -> number(). 
 double(X, Y) -> double(X * Y).
 
--type st
+-type st() :: fest | fluessig | gas.
+
 % Aggregatzustand von Wasser
 -spec state(number()) -> fest | fluessig | gas.
 state(Temp) ->
