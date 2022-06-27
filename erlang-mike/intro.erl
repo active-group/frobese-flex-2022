@@ -10,3 +10,4 @@
 % [1,2,3] Liste
 % Anmerkung: Strings sind Listen
 % #{a => "hello"}. Map
+% #{a => "hello", b => "goodbye"}.
