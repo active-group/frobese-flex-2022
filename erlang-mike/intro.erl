@@ -7,6 +7,8 @@
          start_process/0, process/0,
          counter/1, get_counter/1, counter_add/2]).
 -compile([{nowarn_unused_function, [foo/0]}]).
+
+-
 % double/1 die einstellige Funktion double
 
 % ^^^  sollte dem Dateinamen entsprechen
