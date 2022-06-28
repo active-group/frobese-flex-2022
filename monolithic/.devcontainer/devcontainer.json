@@ -1,11 +1,8 @@
 {
     "name": "erlang",
     "dockerFile": "Dockerfile",
-    "settings": {
-        "terminal.integrated.shell.linux": "/bin/bash"
-    },
     "extensions": [
-        "erlang.erlang-ls"
+        "erlang-ls.erlang-ls"
     ],
     "forwardPorts": [8000, 8001, 8002, 8003]
 }
