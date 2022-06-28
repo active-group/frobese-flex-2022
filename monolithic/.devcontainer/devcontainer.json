@@ -1,0 +1,10 @@
+{
+    "name": "erlang",
+    "dockerFile": "Dockerfile",
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "extensions": [
+        "erlang.erlang-ls"
+    ]
+}
