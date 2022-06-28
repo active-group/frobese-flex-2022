@@ -63,6 +63,7 @@ typical(State) ->
         _ -> error
     end.
 
+-spec safe_divide(number(), number) -> {error, divide_by_zero} | {ok, number()}.
 safe_divide(X, Y) ->
     if
         Y == 0 -> {error, divide_by_zero};
@@ -228,3 +229,6 @@ counter_loop(N) ->
             io:format("at counter ~w received inc ~w~n", [N, Inc]),
             counter_loop(N + Inc)
     end.
+
+% Zahlen, Atome, Strings, Binaries, Listen, Tupel, Maps: "serialisieren sich selbst"
+% "Term", typespec term()
