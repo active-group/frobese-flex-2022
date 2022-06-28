@@ -183,7 +183,7 @@ rev([First|Rest], Acc) ->
 
 
 rev_test() ->
-    [3,2,1] = rev([1,2,3]).
+    [3,2,0] = rev([1,2,3]).
 
 start_process() ->
     % spawn(fun process/0)
