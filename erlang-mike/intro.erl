@@ -182,6 +182,7 @@ rev([First|Rest], Acc) ->
   rev(Rest, [First | Acc]).
 
 
+rev_test() ->
 start_process() ->
     % spawn(fun process/0)
     % spawn(intro, process)
