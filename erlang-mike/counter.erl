@@ -7,6 +7,8 @@
 start(Start) ->
     gen_server:start(?MODULE, Start, [{debug, [trace]}]).
 
+start_link(Start) ->
+    gen_server:start_link(?MODULE, Start, [{debug, [trace]}]).
 
 
 -record(inc, { bump :: number() }).
