@@ -1,0 +1,8 @@
+{
+    "name": "erlang",
+    "dockerFile": "Dockerfile",
+    "extensions": [
+        "erlang-ls.erlang-ls"
+    ],
+    "forwardPorts": [8000, 8001, 8002, 8003]
+}
