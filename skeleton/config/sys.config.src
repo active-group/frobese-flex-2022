@@ -1,0 +1,28 @@
+[
+ %% We need UTC for logging.
+ {sasl, [{utc_log, true}]},
+ %% Lager configuration
+ {lager,
+  [
+   {handlers,
+    [
+     {lager_console_backend,
+      [
+       {level, info}
+      ]},
+     {lager_logstash_backend,
+      [
+       {level,         info},
+       {logstash_host, "${LOGSTASH_HOST}"},
+       {logstash_port, 9125},
+       {node_role,     "erlang"},
+       {node_version,  "0.0.1"},
+       {metadata, [
+                   {account_token,  [{encoding, string}]},
+                   {client_os,      [{encoding, string}]},
+                   {client_version, [{encoding, string}]}
+                  ]}
+      ]}
+    ]}
+  ]}
+].

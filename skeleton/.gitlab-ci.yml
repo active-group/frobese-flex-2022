@@ -1,0 +1,10 @@
+test:
+  image: docker:stable
+  services:
+    - docker:dind
+  before_script:
+    - docker info
+  script:
+    - docker build -t test-image .
+    - docker run test-image test
+

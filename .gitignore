@@ -6,3 +6,20 @@
 *.beam
 
 /erlang/*.beam
+.rebar3
+Mnesia.*
+.eunit
+*.o
+*.plt
+*.swp
+*.swo
+.erlang.cookie
+ebin
+log
+erl_crash.dump
+_build
+logs
+rebar3.crashdump
+*/*.dets
+crash.log
+crash.log.*
