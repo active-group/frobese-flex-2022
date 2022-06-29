@@ -13,7 +13,6 @@ close_tables() ->
     dets:close(person),
     dets:close(transfer),
     dets:close(account),
-    dets:close(event),
     dets:close(table_id).
 
 %% destroy tables in case they already existed
@@ -21,7 +20,6 @@ destroy_tables() ->
     file:delete("person.dets"),
     file:delete("transfer.dets"),
     file:delete("account.dets"),
-    file:delete("event.dets"),
     file:delete("table_id.dets").
 
 % unfortunately, delete_table doesn't always work such that create_table doesn't fail, so don't check return value
@@ -29,12 +27,10 @@ create_tables() ->
     {ok, person} = dets:open_file(person, [{type, set}, {file, "person.dets"}]),
     {ok, transfer} = dets:open_file(transfer, [{type, set}, {file, "transfer.dets"}]),
     {ok, account} = dets:open_file(account, [{type, set}, {file, "account.dets"}]),
-    {ok, event} = dets:open_file(event, [{type, set}, {file, "event.dets"}]),
     {ok, table_id} = dets:open_file(table_id, [{type, set}, {file, "table_id.dets"}]),
     dets:insert(table_id, {person, 0}),
     dets:insert(table_id, {transfer, 0}),
-    dets:insert(table_id, {account, 0}),
-    dets:insert(table_id, {event, 0}).
+    dets:insert(table_id, {account, 0}).
 
 init_database() ->
     close_tables(),

@@ -1,6 +1,15 @@
 -module(events).
--export([put_event/1, get_all_events/0, get_events_from/1]).
+-export([init_events/0, put_event/1, get_all_events/0, get_events_from/1]).
 -include("events.hrl").
+
+% call after database: init_database/0
+
+init_events() ->
+    dets:close(event),
+    file:delete("event.dets"),
+    {ok, event} = dets:open_file(event, [{type, set}, {file, "event.dets"}]),
+    dets:insert(table_id, {event, 0}).
+
 
 -spec unique_event_number() -> non_neg_integer().
 unique_event_number() -> dets:update_counter(table_id, event, 1).

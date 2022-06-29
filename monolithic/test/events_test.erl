@@ -3,7 +3,8 @@
 -include("events.hrl").
 
 setup() ->
-    database:init_database().
+    database:init_database(),
+    events:init_events().
 
 cleanup(_) -> ok.
 
