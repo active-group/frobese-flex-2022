@@ -38,9 +38,9 @@ case "$1" in
         while true; do # wait for local logstash
             echo "$(date) waiting logstash ..."
             curl -s -XGET "$LOGSTASH_HOST:9600"
-#            if [ "$?" -eq 0 ]; then
-#                break
-#            fi
+            if [ "$?" -eq 0 ]; then
+                break
+            fi
             sleep 10
         done
 
