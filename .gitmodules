@@ -1,0 +1,3 @@
+[submodule "accounts"]
+	path = accounts
+	url = ../frobese-2022-accounts
