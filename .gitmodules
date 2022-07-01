@@ -1,3 +1,9 @@
 [submodule "accounts"]
 	path = accounts
 	url = ../frobese-2022-accounts
+[submodule "transfers"]
+	path = transfers
+	url = ../frobese-2022-transfers
+[submodule "bank_statements"]
+	path = bank_statements
+	url = ../frobese-2022-bank-statements
