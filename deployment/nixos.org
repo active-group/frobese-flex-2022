@@ -1,0 +1,79 @@
+* NixOS installation
+
+VirtualBOX NAT
+
+16GB hard drive
+
+MBR
+
+https://nixos.org/manual/nixos/stable/index.html#sec-installation
+
+Port forwarding:
+
+22 -> irgendwas
+9125 (Logstash)
+5601 (Kibana)
+
+sudo -i
+
+"Legacy Boot"
+
+configuration.nix:
+
+boot.loader.grub.device = "/dev/sda";
+services.openssh.enable = true
+services.openssh.permitRootLogin = "yes";
+networking.firewall.enable = false;
+
+...
+
+
+# readlink -f ~/.nix-defexpr/channels
+/nix/store/2ljqs0vljmna9r1dr7d6h9i9dr6spbax-nixos-22.05.1043.5afb1b7dcf4
+# nix-channel --add https://github.com/nixos/nixpkgs/archive/5afb1b7dcf46c4ded5719525a42879b35363862c.tar.gz nixos
+# nix-channel --update
+# nixos-rebuild switch
+
+
+host.docker.internal
+
+
+#+begin_src nix
+  services.logstash = {
+    enable = true;
+    inputConfig = ''
+    udp  {
+        codec => "json"
+        port  => 9125
+        type  => "erlang"
+    }
+'';
+    filterConfig = ''
+  mutate {
+    add_field => { "env" => "debug" }
+    replace => { "host" => "ip_address" }
+  }
+'';
+    outputConfig = ''
+    elasticsearch {
+        hosts => ["localhost:9200"]
+        index => "erlbank-%{+YYYY.MM.dd}"
+    }
+    stdout { codec => rubydebug }
+'';
+  };
+
+  services.elasticsearch = {
+    enable = true;
+  };
+  # ElasticSearch
+  nixpkgs.config.allowUnfree = true;
+
+  services.kibana = {
+    enable = true;
+    elasticsearch.url = "http://localhost:9200";
+  };
+  nixpkgs.config.permittedInsecurePackages = [
+                "nodejs-10.24.1"
+              ];
+#+end_src

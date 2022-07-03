@@ -1,0 +1,37 @@
+{
+  "index_patterns" : [
+    {
+      "es": {
+        "default_index": "erlbank-*",
+        "allow_url_parameter": false
+      },
+      "tail_interval_in_seconds": 10,
+      "es_index_time_offset_in_seconds": 0,
+      "display_timezone": "UTC",
+      "display_timestamp_format": "YYYY MMM DD HH:mm:ss",
+      "max_buckets": 500,
+      "default_time_range_in_days" : 0,
+      "max_hosts": 100,
+      "max_events_to_keep_in_viewer": 5000,
+      "fields" : {
+        "mapping" : {
+            "timestamp" : "@timestamp",
+            "display_timestamp" : "@timestamp",
+            "log_level" : "fields.level",
+            "hostname" : "host",
+            "program": "type",
+            "message": "message"
+        },
+        "message_format": "{{{marker}}} {{{fields.level}}} | {{{message}}}"
+      },
+      "color_mapping" : {
+        "field" : "fields.level",
+        "mapping" : {
+          "error": "#ff3232",
+          "warning": "#ff7f24",
+          "info": "#ffffff"
+         }
+      }
+    }
+  ]
+}
